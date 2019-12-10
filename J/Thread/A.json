@@ -1,0 +1,21 @@
+{
+    "avatar_url": "...",
+    "user_name": "...",
+    "apply": "...",
+    "title": "...",
+    "items": [{
+            "item_id": "...",
+            "item_title": "...",
+            "item_content": "...",
+            "item_flag": 0
+
+        },
+        {
+            "item_id": "...",
+            "item_title": "...",
+            "item_content": "...",
+            "item_flag": 0
+
+        }
+    ]
+}

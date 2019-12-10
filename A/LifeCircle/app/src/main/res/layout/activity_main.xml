@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/startService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="startService" />
+
+    <Button
+        android:id="@+id/stopService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/startService"
+        android:text="stopService" />
+
+    <Button
+        android:id="@+id/bindService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/stopService"
+        android:text="bindService" />
+
+    <Button
+        android:id="@+id/unbindService"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/bindService"
+        android:text="unbindService" />
+
+
+    <fragment
+        android:id="@+id/myFragment"
+        android:name="com.baidu.lifecircle.MainFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/unbindService" />
+
+
+</RelativeLayout>

@@ -1,0 +1,131 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Pool",
+            "request": "launch",
+            "mainClass": "Pool",
+            "projectName": "Thread_447e54d9"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - DeadLock",
+            "request": "launch",
+            "mainClass": "DeadLock",
+            "projectName": "Thread_447e54d9"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Handler",
+            "request": "launch",
+            "mainClass": "Handler"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Group",
+            "request": "launch",
+            "mainClass": "Group"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WaitAndNotify",
+            "request": "launch",
+            "mainClass": "WaitAndNotify"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Wait",
+            "request": "launch",
+            "mainClass": "Wait"
+        },
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - Wait",
+            "request": "launch",
+            "mainClass": "Wait",
+            "projectName": "Thread_447e54d9"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch) - Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Interrupt",
+            "request": "launch",
+            "mainClass": "Interrupt"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Join",
+            "request": "launch",
+            "mainClass": "Join"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Lock",
+            "request": "launch",
+            "mainClass": "Lock"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Priority",
+            "request": "launch",
+            "mainClass": "Priority"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Sleep",
+            "request": "launch",
+            "mainClass": "Sleep"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Synchronize",
+            "request": "launch",
+            "mainClass": "Synchronize"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test",
+            "request": "launch",
+            "mainClass": "Test"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Yield",
+            "request": "launch",
+            "mainClass": "Yield"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test(1)",
+            "request": "launch",
+            "mainClass": "com.api.Test"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test(2)",
+            "request": "launch",
+            "mainClass": "com.bank.Test"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test(3)",
+            "request": "launch",
+            "mainClass": "com.daemon.Test"
+        },
+        {
+            "type": "java",
+            "name": "Debug (Launch)-Test(4)",
+            "request": "launch",
+            "mainClass": "com.memory.Test"
+        }
+    ]
+}
