@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+    <classpathentry kind="lib" path="lib/auto-service-1.0-rc3"/>
+    <classpathentry kind="lib" path="lib/javapoet-1.11.1"/>
+</classpath>

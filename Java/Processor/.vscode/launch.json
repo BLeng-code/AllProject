@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - SingleInstanceTest",
+            "request": "launch",
+            "mainClass": "SingleInstanceTest",
+            "projectName": "Processor_9f77383e"
+        }
+    ]
+}
