@@ -45,6 +45,7 @@ public class SingleInstanceProcessor extends AbstractProcessor {
         for (final Element element : elements) {
             if (element instanceof TypeElement) {
                 final TypeElement typeElement = (TypeElement) element;
+                
                 final PackageElement packageElement = elementUtils.getPackageOf(typeElement);
                 final String className = typeElement.getSimpleName().toString();
                 final FieldSpec fieldSpec = FieldSpec
