@@ -1,0 +1,24 @@
+{
+   "type": "mysql",
+   "host": "106.13.83.169",
+   "port": 3306,
+   "username": "typeorm",
+   "password": "!123456typeorm654321!",
+   "database": "typeorm",
+   "synchronize": true,
+   "logging": false,
+   "entities": [
+      "src/entity/**/*.ts"
+   ],
+   "migrations": [
+      "src/migration/**/*.ts"
+   ],
+   "subscribers": [
+      "src/subscriber/**/*.ts"
+   ],
+   "cli": {
+      "entitiesDir": "src/entity",
+      "migrationsDir": "src/migration",
+      "subscribersDir": "src/subscriber"
+   }
+}
