@@ -1,56 +1,40 @@
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
 import java.io.InputStream;
 
-class MyClassLoader extends ClassLoader {
+public class MyClassLoader extends ClassLoader {
+    private String classpath;
+
+    public MyClassLoader(String classpath) {
+        this.classpath = classpath;
+    }
 
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
-        try {
-            String fileName = name.substring(name.lastIndexOf(".") + 1) + ".class";
-            InputStream inputStream = getClass().getResourceAsStream(fileName);
-            if (inputStream == null) {
-                throw new ClassCastException();
-            }
-            byte[] b = new byte[inputStream.available()];
-            inputStream.read(b);
-            return super.defineClass(name, b, 0, b.length);
-        } catch (Exception e) {
-            // TODO: handle exception
-            throw new ClassCastException();
+        System.out.println("子类查找");
+        byte[] bytes = getBytesCodeFormPath(name);
+        if (bytes != null) {
+            return super.defineClass(name, bytes, 0, bytes.length);
         }
+        return super.findClass(name);
     }
 
-    @Override
-    public Class<?> loadClass(String name) throws ClassNotFoundException {
-        synchronized (getClassLoadingLock(name)) {
-            Class<?> klass = findLoadedClass(name);
-            if (klass == null) {
-                if (name.startsWith("java.") || name.startsWith("javax")) {
-                    try {
-                        klass = getSystemClassLoader().loadClass(name);
-                    } catch (Exception e) {
-                        // TODO: handle exception
-                    }
-                } else {
-                    try {
-                        klass = findClass(name);
-                    } catch (Exception e) {
-                        // TODO: handle exception
-                    }
-                    if (klass == null) {
-                        if (getParent() != null) {
-                            klass = getParent().loadClass(name);
-                        } else {
-                            klass = getSystemClassLoader().loadClass(name);
-                        }
-                    }
-                }
-                if (klass == null) {
-                    throw new ClassNotFoundException();
-                }
-                return klass;
+    private byte[] getBytesCodeFormPath(String className) {
+        String path = classpath + File.separatorChar + className.replace('.', File.separatorChar) + ".class";
+        try {
+            InputStream in = new FileInputStream(path);
+            ByteArrayOutputStream out = new ByteArrayOutputStream();
+            byte[] buffers = new byte[2048];
+            int len = 0;
+            while ((len = in.read(buffers)) != -1) {
+                out.write(buffers, 0, len);
             }
+            return out.toByteArray();
+        } catch (Exception ex) {
+            // NOOP
+            ex.printStackTrace();
         }
         return null;
     }
-
 }
