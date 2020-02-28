@@ -1,7 +1,7 @@
 import sun.awt.Mutex;
 
-class Synchronize {
-    public static void main(String[] args) {
+class  Synchronize {
+    public static synchronized void main(String[] args) {
         int MAX = 50;
         Object read = new Mutex();
         Object write = new Mutex();
