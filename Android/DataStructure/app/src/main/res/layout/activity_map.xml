@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".map.MapActivity">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="存储键值对,键是唯一的，每一个键至多对应一个值，重复设置值，只会保留最新值"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/hashMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HashMap"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/enumMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="EnumMap"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/hashMap"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <Button
+        android:id="@+id/hashTable"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="HashTable"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/identityHashMap"
+        tools:layout_editor_absoluteX="16dp" />
+
+    <Button
+        android:id="@+id/identityHashMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="IdentityHashMap"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/enumMap"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/linkedHashMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="LinkedHashMap"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/hashTable"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/treeMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TreeMap"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/linkedHashMap"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/weakHashMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="WeakHashMap"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/treeMap"
+        tools:layout_editor_absoluteX="0dp" />
+
+    <Button
+        android:id="@+id/concurrentHashMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ConcurrentHashMap"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/weakHashMap"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+    <Button
+        android:id="@+id/concurrentSkipListMap"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ConcurrentSkipListMap"
+        android:textAllCaps="false"
+        app:layout_constraintTop_toBottomOf="@+id/concurrentHashMap"
+        tools:layout_editor_absoluteX="0dp" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

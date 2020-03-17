@@ -83,4 +83,10 @@ public class MainFragment extends Fragment {
         super.onDetach();
         Log.i(TAG, "onDetach");
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState");
+    }
 }

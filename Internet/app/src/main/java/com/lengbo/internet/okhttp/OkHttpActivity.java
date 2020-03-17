@@ -40,43 +40,19 @@ public class OkHttpActivity extends AppCompatActivity {
                     @Override
                     public void run() {
 
-                        OkHttpClient client = new OkHttpClient.Builder()
-//                                .addInterceptor(new Interceptor() {
-//                                    @Override
-//                                    public Response intercept(Chain chain) throws IOException {
-//                                        Log.i(TAG, "第一个拦截器开始处理");
-//                                        Response response = chain.proceed(chain.request());
-//                                        Log.i(TAG, "第一个拦截器处理完毕");
-//                                        return response;
-//                                    }
-//                                })
-//                                .addInterceptor(new Interceptor() {
-//                                    @Override
-//                                    public Response intercept(Chain chain) throws IOException {
-//                                        Log.i(TAG, "第二个拦截器开始处理");
-//                                        Response response = chain.proceed(chain.request());
-//                                        Log.i(TAG, "第二个拦截器处理完毕");
-//                                        return response;
-//                                    }
-//                                })
-                                .build();
+                        OkHttpClient client = new OkHttpClient();
 
                         Request request = new Request.Builder()
                                 .url("http://www.lengbo.site")
                                 .build();
+
                         Call call = client.newCall(request);
 
-                        call.enqueue(new Callback() {
-                            @Override
-                            public void onFailure(Call call, IOException e) {
-                                Log.i(TAG, "失败了");
-                            }
-
-                            @Override
-                            public void onResponse(Call call, Response response) throws IOException {
-                                Log.i(TAG, "成功了");
-                            }
-                        });
+                        try {
+                            call.execute();
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
 
                     }
                 };

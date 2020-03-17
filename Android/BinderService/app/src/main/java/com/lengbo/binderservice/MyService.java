@@ -18,17 +18,7 @@ import androidx.annotation.Nullable;
 public class MyService extends Service {
     private String TAG = "Service";
 
-    private IBinder mBinder = new IService.Stub() {
-        @Override
-        public void basicTypes(int anInt, long aLong, boolean aBoolean, float aFloat, double aDouble, String aString) throws RemoteException {
-
-        }
-
-        @Override
-        public void say(String word) throws RemoteException {
-            ShowPresenter.getInstance().showData(word);
-        }
-    };
+    private IBinder mBinder = new MyBinder();
 
     @Nullable
     @Override

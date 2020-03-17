@@ -12,6 +12,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+import androidx.annotation.NonNull;
+
 public class MainActivity extends Activity {
 
     private String TAG = MainActivity.class.getSimpleName() + "LengBo";
@@ -116,5 +118,18 @@ public class MainActivity extends Activity {
     protected void onRestart() {
         super.onRestart();
         Log.i(TAG, "onRestart");
+    }
+
+    @Override
+    protected void onSaveInstanceState(@NonNull Bundle outState) {
+        super.onSaveInstanceState(outState);
+        Log.i(TAG, "onSaveInstanceState");
+
+    }
+
+    @Override
+    protected void onRestoreInstanceState(@NonNull Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        Log.i(TAG, "onRestoreInstanceState");
     }
 }
